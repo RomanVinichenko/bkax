@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 16px;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        a {
+          font-size: 14px;
+          line-height: 20px;
+          color: #05062b;
+        }
+
+        + li {
+          margin-left: 32px;
+        }
+      }
+    }
+
+    &__btns {
+      display: flex;
+      align-items: center;
+
+      a {
+        &:first-child {
+          box-shadow: none;
+          background-image: none;
+          background-color: #05062b;
+        }
+
+        + a {
+          margin-left: 8px;
+        }
+      }
+
+      .btn {
+        padding: 0 24px;
+        height: 44px;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
