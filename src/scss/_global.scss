@@ -972,7 +972,7 @@ body {
     max-width: 50%;
 
     &::after {
-      content: url("/src/images/rocket.svg");
+      content: url("/src/images/rocket.png?as=webp");
       position: absolute;
       right: 0;
       top: 50%;
