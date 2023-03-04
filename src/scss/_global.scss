@@ -1,4 +1,5 @@
 body {
+  position: relative;
   overflow: hidden;
   overflow-y: scroll;
   font-family: "Poppins", sans-serif;
@@ -16,6 +17,7 @@ body {
 
 .btn {
   position: relative;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,8 +32,24 @@ body {
   line-height: 20px;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+  background-image: linear-gradient(122.37deg, #4845ba 0%, #3391d2 97.43%), linear-gradient(91.89deg, #1638ec 2.44%, #00befa 95.79%);
   background-color: transparent;
+  transition: all 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-image: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+    transition: all 0.3s;
+  }
 
   &::after {
     content: url("/src/images/button-arrow.svg");
@@ -42,9 +60,25 @@ body {
     height: 16px;
     transform: translateY(-50%);
   }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+  }
+}
+
+.lottie {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: fit-content;
 }
 
 .top {
+  position: relative;
   padding-top: 26vh;
 
   h1 {
@@ -130,6 +164,7 @@ body {
           padding: 0 24px;
           width: 300px;
           height: 68px;
+          outline: none;
           border: 1px solid rgba(73, 84, 106, 0.24);
           border-radius: 16px;
           font-weight: 400;
@@ -137,6 +172,27 @@ body {
           line-height: 20px;
           color: #49546a;
           background-color: #f2faff;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: #fff;
+            cursor: pointer;
+
+            &::placeholder {
+              color: #000;
+            }
+          }
+
+          &:active,
+          &:target,
+          &:focus {
+            color: #000;
+            background-color: #fff;
+          }
+
+          &::placeholder {
+            color: #49546a;
+          }
         }
       }
     }
@@ -166,6 +222,15 @@ body {
 
     img {
       max-width: 200px;
+
+      &:first-of-type {
+        z-index: -5;
+      }
+
+      &:nth-of-type(2) {
+        margin-top: -80px;
+        margin-left: -25px;
+      }
     }
   }
 }
@@ -204,12 +269,21 @@ body {
       color: #05062b;
       background-image: none;
       background-color: rgba(5, 6, 43, 0.05);
+      transition: all 0.3s;
+
+      &::before {
+        display: none;
+      }
 
       &::after {
         content: url("/src/images/news-arrow.svg");
         right: 16px;
         width: 24px;
         height: 24px;
+      }
+
+      &:hover {
+        background-color: rgba(5, 6, 43, 0.1);
       }
     }
   }
@@ -224,6 +298,65 @@ body {
     max-width: 1320px;
     border-radius: 32px;
     background-color: #fff;
+  }
+
+  .panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+
+  .nav-tabs {
+    display: flex;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.3;
+        padding: 0 24px;
+        height: 40px;
+        border: 2px solid;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-image-source: linear-gradient(109.89deg, #fff -18%, #fff 93.18%);
+        border-image-slice: 1;
+        font-weight: 700;
+        line-height: 24px;
+        color: #05062b;
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 1;
+          border-image-source: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+        }
+      }
+
+      .panel-link {
+        position: relative;
+        padding: 0 48px 0 24px;
+
+        &::before {
+          content: url("/src/images/panel-link.svg");
+          position: absolute;
+          right: 24px;
+          top: 50%;
+          width: 16px;
+          height: 16px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .active {
+      a {
+        opacity: 1;
+        border-image-source: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+      }
+    }
   }
 
   &__decor {
@@ -261,12 +394,21 @@ body {
       color: #05062b;
       background-image: none;
       background-color: rgba(5, 6, 43, 0.05);
+      transition: all 0.3s;
+
+      &::before {
+        display: none;
+      }
 
       &::after {
         content: url("/src/images/news-arrow.svg");
         right: 16px;
         width: 24px;
         height: 24px;
+      }
+
+      &:hover {
+        background-color: rgba(5, 6, 43, 0.1);
       }
     }
   }
@@ -309,7 +451,10 @@ body {
 
       .btn {
         color: #fff;
-        background-image: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%), linear-gradient(0deg, rgba(5, 6, 43, 0.05), rgba(5, 6, 43, 0.05));
+
+        &::before {
+          opacity: 0;
+        }
       }
     }
 
@@ -332,8 +477,13 @@ body {
         font-weight: 500;
         line-height: 24px;
         color: #151515;
-        background-image: linear-gradient(0deg, rgba(5, 6, 43, 0.05), rgba(5, 6, 43, 0.05));
+        background: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%), linear-gradient(0deg, rgba(5, 6, 43, 0.05), rgba(5, 6, 43, 0.05));
         transition: all 0.3s;
+
+        &::before {
+          border-radius: 8px;
+          background: linear-gradient(0deg, rgba(5, 6, 43, 0.05), rgba(5, 6, 43, 0.05)), #fff;
+        }
 
         &::after {
           display: none;
@@ -420,6 +570,34 @@ body {
           }
         }
       }
+    }
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #05062b;
+    border-radius: 16px;
+    background-color: transparent;
+    transition: all 0.3s;
+
+    &::after {
+      content: url("/src/images/search.svg");
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      border: 1px solid #000;
     }
   }
 }
@@ -534,7 +712,7 @@ body {
         justify-content: center;
         width: 48px;
         height: 48px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid #fff;
         border-radius: 4px;
         transform: translateY(-50%);
         transition: all 0.3s;
@@ -547,9 +725,19 @@ body {
         background-repeat: no-repeat;
       }
 
+      &:hover {
+        &::after {
+          border: 1px solid #fff;
+        }
+      }
+
       &.collapsed {
         &::before {
           transform: translateY(-50%) rotate(180deg);
+        }
+
+        &::after {
+          border: 1px solid rgba(255, 255, 255, 0.5);
         }
       }
     }
@@ -604,6 +792,7 @@ body {
 
       a {
         position: relative;
+        opacity: 0.8;
         padding-right: 22px;
         width: fit-content;
         font-weight: 600;
@@ -613,6 +802,7 @@ body {
         text-fill-color: transparent;
         background: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
         background-clip: text;
+        transition: all 0.3s;
 
         &::after {
           content: url("/src/images/quest-arrow.svg");
@@ -622,6 +812,10 @@ body {
           width: 18px;
           height: 18px;
           transform: translateY(-50%);
+        }
+
+        &:hover {
+          opacity: 1;
         }
       }
     }
@@ -731,8 +925,36 @@ body {
     background-image: none;
     background-color: #fff;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
-      filter: invert(1);
+      display: none;
+    }
+
+    &:hover {
+      color: #1be0ea;
+
+      svg {
+        path {
+          stroke: #1be0ea;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      width: 17px;
+      height: 17px;
+      transform: translateY(-50%);
+
+      path {
+        stroke: #05062a;
+        transition: all 0.3s;
+      }
     }
   }
 

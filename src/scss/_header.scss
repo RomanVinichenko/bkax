@@ -20,6 +20,11 @@
           font-size: 14px;
           line-height: 20px;
           color: #05062b;
+          transition: all 0.3s;
+
+          &:hover {
+            color: #4845ba;
+          }
         }
 
         + li {
@@ -37,6 +42,14 @@
           box-shadow: none;
           background-image: none;
           background-color: #05062b;
+
+          &::before {
+            display: none;
+          }
+
+          &:hover {
+            background-color: #4845ba;
+          }
         }
 
         + a {

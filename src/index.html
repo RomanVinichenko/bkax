@@ -13,6 +13,8 @@
 </head>
 <!--<img src="./images/logo.svg" alt="Img">-->
 <body>
+<lottie-player class="lottie" src="https://lottie.host/249e44c5-ab6d-45ac-8082-aeed1431bf33/ETRbPKCmwx.json"
+               speed="1" loop autoplay></lottie-player>
 <header class="header">
   <div class="container">
     <nav class="menu">
@@ -159,173 +161,881 @@
           Explore Markets
         </a>
       </div>
-      <div class="crypto__list">
-        <ul class="crypto__title">
-          <li>
-            <p>Name</p>
-          </li>
-          <li>
-            <p>Price</p>
-          </li>
-          <li>
-            <p>24h%</p>
-          </li>
-          <li>
-            <p>Volume(24)</p>
-          </li>
-          <li>
-          </li>
-        </ul>
-        <ul class="crypto__item">
-          <li>
-            <img src="./images/eth.svg" alt="Eth">
-            <h6>ETH</h6>
-            <p>
-              Ethereum
-            </p>
-          </li>
-          <li>
+      <div class="panel panel-default">
+        <div class="panel-heading panel-heading-nav">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+              <a href="#one" aria-controls="one" role="tab" data-toggle="tab">Spot</a>
+            </li>
+            <li role="presentation">
+              <a href="#two" aria-controls="two" role="tab" data-toggle="tab">ETF</a>
+            </li>
+            <li role="presentation">
+              <a href="#three" aria-controls="three" role="tab" data-toggle="tab">Newly Listed</a>
+            </li>
+            <li role="presentation">
+              <a href="#three" aria-controls="four" role="tab" data-toggle="tab">Top Gainers</a>
+            </li>
+            <li role="presentation">
+              <a class="panel-link" href="#three" aria-controls="five" role="tab" data-toggle="tab">Leaderboard</a>
+            </li>
+          </ul>
+          <button class="crypto__search"></button>
+        </div>
+        <div class="panel-body">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="one">
+              <div class="crypto__list">
+                <ul class="crypto__title">
+                  <li>
+                    <p>Name</p>
+                  </li>
+                  <li>
+                    <p>Price</p>
+                  </li>
+                  <li>
+                    <p>24h%</p>
+                  </li>
+                  <li>
+                    <p>Volume(24)</p>
+                  </li>
+                  <li>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/eth.svg" alt="Eth">
+                    <h6>ETH</h6>
+                    <p>
+                      Ethereum
+                    </p>
+                  </li>
+                  <li>
             <span>
               $1,180.81
             </span>
-          </li>
-          <li class="up">
+                  </li>
+                  <li class="up">
             <span>
               14.36%
             </span>
-          </li>
-          <li>
+                  </li>
+                  <li>
             <span>
               $126,548,207,878
             </span>
-            <p>
-              7,331,024 BTC
-            </p>
-          </li>
-          <li>
-            <a class="btn" href="#">Trade</a>
-          </li>
-        </ul>
-        <ul class="crypto__item">
-          <li>
-            <img src="./images/bitcoin.svg" alt="Bitcoin">
-            <h6>BTC</h6>
-            <p>
-              Bitcoin
-            </p>
-          </li>
-          <li>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bitcoin.svg" alt="Bitcoin">
+                    <h6>BTC</h6>
+                    <p>
+                      Bitcoin
+                    </p>
+                  </li>
+                  <li>
             <span>
               $1,180.81
             </span>
-          </li>
-          <li class="down">
+                  </li>
+                  <li class="down">
             <span>
               14.36%
             </span>
-          </li>
-          <li>
+                  </li>
+                  <li>
             <span>
               $126,548,207,878
             </span>
-            <p>
-              7,331,024 BTC
-            </p>
-          </li>
-          <li>
-            <a class="btn" href="#">Trade</a>
-          </li>
-        </ul>
-        <ul class="crypto__item">
-          <li>
-            <img src="./images/tether.svg" alt="Tether">
-            <h6>USDT</h6>
-            <p>
-              Tether
-            </p>
-          </li>
-          <li>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/tether.svg" alt="Tether">
+                    <h6>USDT</h6>
+                    <p>
+                      Tether
+                    </p>
+                  </li>
+                  <li>
             <span>
               $1,180.81
             </span>
-          </li>
-          <li class="up">
+                  </li>
+                  <li class="up">
             <span>
               14.36%
             </span>
-          </li>
-          <li>
+                  </li>
+                  <li>
             <span>
               $126,548,207,878
             </span>
-            <p>
-              7,331,024 BTC
-            </p>
-          </li>
-          <li>
-            <a class="btn" href="#">Trade</a>
-          </li>
-        </ul>
-        <ul class="crypto__item">
-          <li>
-            <img src="./images/bnb.svg" alt="Binance">
-            <h6>BNB</h6>
-            <p>
-              Binance
-            </p>
-          </li>
-          <li>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bnb.svg" alt="Binance">
+                    <h6>BNB</h6>
+                    <p>
+                      Binance
+                    </p>
+                  </li>
+                  <li>
             <span>
               $1,180.81
             </span>
-          </li>
-          <li class="down">
+                  </li>
+                  <li class="down">
             <span>
               14.36%
             </span>
-          </li>
-          <li>
+                  </li>
+                  <li>
             <span>
               $126,548,207,878
             </span>
-            <p>
-              7,331,024 BTC
-            </p>
-          </li>
-          <li>
-            <a class="btn" href="#">Trade</a>
-          </li>
-        </ul>
-        <ul class="crypto__item">
-          <li>
-            <img src="./images/usdc.svg" alt="USD Coin">
-            <h6>USDC</h6>
-            <p>
-              USD Coin
-            </p>
-          </li>
-          <li>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/usdc.svg" alt="USD Coin">
+                    <h6>USDC</h6>
+                    <p>
+                      USD Coin
+                    </p>
+                  </li>
+                  <li>
             <span>
               $1,180.81
             </span>
-          </li>
-          <li class="up">
+                  </li>
+                  <li class="up">
             <span>
               14.36%
             </span>
-          </li>
-          <li>
+                  </li>
+                  <li>
             <span>
               $126,548,207,878
             </span>
-            <p>
-              7,331,024 BTC
-            </p>
-          </li>
-          <li>
-            <a class="btn" href="#">Trade</a>
-          </li>
-        </ul>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="two">
+              <div class="crypto__list">
+                <ul class="crypto__title">
+                  <li>
+                    <p>Name</p>
+                  </li>
+                  <li>
+                    <p>Price</p>
+                  </li>
+                  <li>
+                    <p>24h%</p>
+                  </li>
+                  <li>
+                    <p>Volume(24)</p>
+                  </li>
+                  <li>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/eth.svg" alt="Eth">
+                    <h6>ETH</h6>
+                    <p>
+                      Ethereum
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bitcoin.svg" alt="Bitcoin">
+                    <h6>BTC</h6>
+                    <p>
+                      Bitcoin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/tether.svg" alt="Tether">
+                    <h6>USDT</h6>
+                    <p>
+                      Tether
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bnb.svg" alt="Binance">
+                    <h6>BNB</h6>
+                    <p>
+                      Binance
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/usdc.svg" alt="USD Coin">
+                    <h6>USDC</h6>
+                    <p>
+                      USD Coin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="three">
+              <div class="crypto__list">
+                <ul class="crypto__title">
+                  <li>
+                    <p>Name</p>
+                  </li>
+                  <li>
+                    <p>Price</p>
+                  </li>
+                  <li>
+                    <p>24h%</p>
+                  </li>
+                  <li>
+                    <p>Volume(24)</p>
+                  </li>
+                  <li>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/eth.svg" alt="Eth">
+                    <h6>ETH</h6>
+                    <p>
+                      Ethereum
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bitcoin.svg" alt="Bitcoin">
+                    <h6>BTC</h6>
+                    <p>
+                      Bitcoin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/tether.svg" alt="Tether">
+                    <h6>USDT</h6>
+                    <p>
+                      Tether
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bnb.svg" alt="Binance">
+                    <h6>BNB</h6>
+                    <p>
+                      Binance
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/usdc.svg" alt="USD Coin">
+                    <h6>USDC</h6>
+                    <p>
+                      USD Coin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="four">
+              <div class="crypto__list">
+                <ul class="crypto__title">
+                  <li>
+                    <p>Name</p>
+                  </li>
+                  <li>
+                    <p>Price</p>
+                  </li>
+                  <li>
+                    <p>24h%</p>
+                  </li>
+                  <li>
+                    <p>Volume(24)</p>
+                  </li>
+                  <li>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/eth.svg" alt="Eth">
+                    <h6>ETH</h6>
+                    <p>
+                      Ethereum
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bitcoin.svg" alt="Bitcoin">
+                    <h6>BTC</h6>
+                    <p>
+                      Bitcoin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/tether.svg" alt="Tether">
+                    <h6>USDT</h6>
+                    <p>
+                      Tether
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bnb.svg" alt="Binance">
+                    <h6>BNB</h6>
+                    <p>
+                      Binance
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/usdc.svg" alt="USD Coin">
+                    <h6>USDC</h6>
+                    <p>
+                      USD Coin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="five">
+              <div class="crypto__list">
+                <ul class="crypto__title">
+                  <li>
+                    <p>Name</p>
+                  </li>
+                  <li>
+                    <p>Price</p>
+                  </li>
+                  <li>
+                    <p>24h%</p>
+                  </li>
+                  <li>
+                    <p>Volume(24)</p>
+                  </li>
+                  <li>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/eth.svg" alt="Eth">
+                    <h6>ETH</h6>
+                    <p>
+                      Ethereum
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bitcoin.svg" alt="Bitcoin">
+                    <h6>BTC</h6>
+                    <p>
+                      Bitcoin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/tether.svg" alt="Tether">
+                    <h6>USDT</h6>
+                    <p>
+                      Tether
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/bnb.svg" alt="Binance">
+                    <h6>BNB</h6>
+                    <p>
+                      Binance
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="down">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+                <ul class="crypto__item">
+                  <li>
+                    <img src="./images/usdc.svg" alt="USD Coin">
+                    <h6>USDC</h6>
+                    <p>
+                      USD Coin
+                    </p>
+                  </li>
+                  <li>
+            <span>
+              $1,180.81
+            </span>
+                  </li>
+                  <li class="up">
+            <span>
+              14.36%
+            </span>
+                  </li>
+                  <li>
+            <span>
+              $126,548,207,878
+            </span>
+                    <p>
+                      7,331,024 BTC
+                    </p>
+                  </li>
+                  <li>
+                    <a class="btn" href="#">Trade</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -544,7 +1254,14 @@
           <p>
             With the BKAX app and website, trading has never been easier.
           </p>
-          <a class="btn" href="#">Get Started</a>
+          <a class="btn" href="#">
+
+            Get Started
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.00049 12.0019L12.0019 4.00049" stroke="#1BE0EA" stroke-width="2.00035" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.50098 4.00049H12.0021V10.5016" stroke="#1BE0EA" stroke-width="2.00035" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
         <div class="journey__img">
         </div>
@@ -661,7 +1378,8 @@
     </div>
   </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js" type="module"></script>
 </body>
