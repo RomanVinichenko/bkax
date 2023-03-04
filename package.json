@@ -30,6 +30,7 @@
     "stylelint-scss": "^4.3.0"
   },
   "dependencies": {
+    "lottie-web": "^5.10.2",
     "swiper": "^9.1.0"
   }
 }

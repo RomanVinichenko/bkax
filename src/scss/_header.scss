@@ -3,6 +3,8 @@
   left: 0;
   right: 0;
   top: 16px;
+  z-index: 40;
+  transition: all 0.3s;
 
   .menu {
     display: flex;
@@ -51,5 +53,12 @@
         }
       }
     }
+  }
+
+  &--active {
+    top: 0;
+    padding: 10px 0;
+    border-radius: 0 0 20px 20px;
+    background-color: #fff;
   }
 }

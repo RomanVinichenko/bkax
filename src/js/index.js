@@ -1,4 +1,4 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, {Navigation} from 'swiper';
 import 'swiper/swiper.css';
 // import 'swiper/css/navigation';
 
@@ -23,4 +23,18 @@ const swiperMedia = new Swiper('.media__swiper', {
     prevEl: '.swiper-button-prev',
   },
   modules: [Navigation]
+});
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+  //>=, not <=
+  if (scroll >= 10) {
+    //clearHeader, not clearheader - caps H
+    $(".header").addClass("header--active");
+  }
+  if (scroll <= 10) {
+    //clearHeader, not clearheader - caps H
+    $(".header").removeClass("header--active");
+  }
 });
