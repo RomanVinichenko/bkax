@@ -226,7 +226,7 @@ body {
 
     @include media(676px) {
       margin-right: 0;
-      margin-bottom: 20px;
+      margin-bottom: 44px;
       max-width: 100%;
     }
 
@@ -312,16 +312,21 @@ body {
 
   &__logos {
     display: flex;
-    flex-wrap: wrap;
 
     img {
-      margin-bottom: 24px;
+      @include media($sm) {
+        transform: scale(0.9);
+      }
 
       &:not(:last-child) {
         margin-right: 48px;
 
         @include media(676px) {
           margin-right: 24px;
+        }
+
+        @include media($sm) {
+          margin-right: 10px;
         }
       }
     }
