@@ -76,23 +76,15 @@ body {
   width: 100%;
   height: fit-content;
 
-  //@include media($xl) {
-  //  right: -10%;
-  //  width: 120%;
-  //  transform: scale(1.3);
-  //}
-  //
-  //@include media($md) {
-  //  right: -20%;
-  //  width: 170%;
-  //  transform: scale(1.4);
-  //}
-  //
-  //@include media($sm) {
-  //  right: -1%;
-  //  width: 200%;
-  //  transform: scale(1.8);
-  //}
+  @include media($xl) {
+    right: -10%;
+    width: 120%;
+    transform: scale(1.3);
+  }
+
+  @include media($md) {
+    display: none;
+  }
 }
 
 .top {
@@ -1293,6 +1285,7 @@ body {
 }
 
 .journey {
+  overflow: hidden;
   position: relative;
   z-index: 5;
   margin: 0 0 -130px;
