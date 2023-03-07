@@ -1,6 +1,6 @@
 body {
   position: relative;
-  overflow-x: hidden!important;
+  overflow-x: hidden !important;
   overflow-y: scroll;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -88,9 +88,9 @@ body {
 }
 
 .top {
-  overflow: hidden;
   position: relative;
   padding-top: 192px;
+  overflow: hidden;
 
   @include media(676px) {
     padding-top: 100px;
@@ -436,6 +436,22 @@ body {
 .crypto {
   position: relative;
   margin-bottom: 173px;
+
+  @include media(1400px) {
+    margin: 0 16px;
+  }
+
+  @include media($lg) {
+    padding-bottom: 40px;
+  }
+
+  @include media($md) {
+    //overflow: hidden;
+  }
+
+  @include media($sm) {
+    padding-bottom: 20px;
+  }
 
   .container {
     padding: 60px 48px;
@@ -870,18 +886,6 @@ body {
     &:focus {
       opacity: 1;
     }
-  }
-  @include media(1400px) {
-    margin: 0 16px;
-  }
-  @include media($lg) {
-    padding-bottom: 40px;
-  }
-  @include media($md) {
-    //overflow: hidden;
-  }
-  @include media($sm) {
-    padding-bottom: 20px;
   }
 }
 
