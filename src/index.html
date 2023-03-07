@@ -11,52 +11,57 @@
   <title>bkax</title>
   <link rel="stylesheet" href="scss/index.scss">
 </head>
-<!--<img src="./images/logo.svg" alt="Img">-->
 <body>
 <lottie-player class="lottie" src="https://lottie.host/249e44c5-ab6d-45ac-8082-aeed1431bf33/ETRbPKCmwx.json"
                speed="1" loop autoplay></lottie-player>
 <header class="header">
   <div class="container">
     <nav class="menu">
-      <a class="logo" href="#">
+      <a class="logo linkin" href="#">
         <img src="./images/logo.svg" alt="Logo">
       </a>
-      <ul>
-        <li>
-          <a href="#">
-            Buy crypto
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Discover
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Trade
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Grow
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Build
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Learn
-          </a>
-        </li>
-      </ul>
-      <div class="menu__btns">
-        <a class="btn" href="#">Login</a>
-        <a class="btn" href="#">Sign up</a>
+      <div class="menu__wrapper">
+        <ul>
+          <li>
+            <a class="linkin" href="#">
+              Buy crypto
+            </a>
+          </li>
+          <li class="linkin">
+            <a href="#">
+              Discover
+            </a>
+          </li>
+          <li class="linkin">
+            <a href="#">
+              Trade
+            </a>
+          </li>
+          <li class="linkin">
+            <a href="#">
+              Grow
+            </a>
+          </li>
+          <li class="linkin">
+            <a href="#">
+              Build
+            </a>
+          </li>
+          <li class="linkin">
+            <a href="#">
+              Learn
+            </a>
+          </li>
+        </ul>
+        <div class="menu__btns">
+          <a class="btn" href="#">Login</a>
+          <a class="btn" href="#">Sign up</a>
+        </div>
       </div>
+      <button class="menu__burger">
+        <img src="./images/burger.svg" alt="Burger">
+        <img src="./images/burger-close.svg" alt="Burger">
+      </button>
     </nav>
   </div>
 </header>
@@ -127,24 +132,31 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="./images/news1.jpeg?as=webp" alt="News">
+            <h6>Black Stallion</h6>
           </div>
           <div class="swiper-slide">
             <img src="./images/news2.jpeg?as=webp" alt="News">
+            <h6>Carbon</h6>
           </div>
           <div class="swiper-slide">
             <img src="./images/news3.jpeg?as=webp" alt="News">
+            <h6>Nanobyte</h6>
           </div>
           <div class="swiper-slide">
             <img src="./images/news1.jpeg?as=webp" alt="News">
+            <h6>Black Stallion</h6>
           </div>
           <div class="swiper-slide">
             <img src="./images/news2.jpeg?as=webp" alt="News">
+            <h6>Carbon</h6>
           </div>
           <div class="swiper-slide">
             <img src="./images/news3.jpeg?as=webp" alt="News">
+            <h6>Nanobyte</h6>
           </div>
           <div class="swiper-slide">
             <img src="./images/news3.jpeg?as=webp" alt="News">
+            <h6>Nanobyte</h6>
           </div>
         </div>
         <div class="swiper-button-prev"></div>
@@ -176,11 +188,16 @@
             <li role="presentation">
               <a href="#three" aria-controls="four" role="tab" data-toggle="tab">Top Gainers</a>
             </li>
-            <li role="presentation">
-              <a class="panel-link" href="#three" aria-controls="five" role="tab" data-toggle="tab">Leaderboard</a>
+            <li class="panel-link" role="presentation">
+              <a  href="#three" aria-controls="five" role="tab" data-toggle="tab">Leaderboard
+                <img src="images/panel-link.svg" alt="Link">
+              </a>
             </li>
           </ul>
-          <button class="crypto__search"></button>
+          <label>
+            <input type="text" class="crypto__search" placeholder="Search">
+            <button></button>
+          </label>
         </div>
         <div class="panel-body">
           <div class="tab-content">
@@ -1079,19 +1096,19 @@
       <div class="trusted__wrapper">
         <ul>
           <li>
-            <img src="./images/trusted1.svg" alt="Img">
+            <img src="./images/trusted1.png" alt="Img">
             <h4>Quick search</h4>
           </li>
           <li>
-            <img src="./images/trusted3.svg" alt="Img">
+            <img src="./images/trusted3.png" alt="Img">
             <h4>Manage your portfolio</h4>
           </li>
           <li>
-            <img src="./images/trusted2.svg" alt="Img">
+            <img src="./images/trusted2.png" alt="Img">
             <h4>Marketplace Volume</h4>
           </li>
           <li>
-            <img src="./images/trusted4.svg" alt="Img">
+            <img src="./images/trusted4.png" alt="Img">
             <h4>Control the Market</h4>
           </li>
         </ul>

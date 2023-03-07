@@ -75,11 +75,33 @@ body {
   z-index: -1;
   width: 100%;
   height: fit-content;
+
+  @include media($xl) {
+    right: -10%;
+    width: 120%;
+    transform: scale(1.3);
+  }
+
+  @include media($md) {
+    right: -20%;
+    width: 170%;
+    transform: scale(1.4);
+  }
+
+  @include media($sm) {
+    right: -1%;
+    width: 200%;
+    transform: scale(1.8);
+  }
 }
 
 .top {
   position: relative;
-  padding-top: 26vh;
+  padding-top: 192px;
+
+  @include media(676px) {
+    padding-top: 100px;
+  }
 
   h1 {
     margin-bottom: 48px;
@@ -87,6 +109,18 @@ body {
     font-size: 70px;
     line-height: 72px;
     color: #05062a;
+
+    @include media(1100px) {
+      margin-bottom: 32px;
+      font-size: 50px;
+      line-height: 62px;
+    }
+
+    @include media($md) {
+      margin-bottom: 48px;
+      font-size: 48px;
+      line-height: 105%;
+    }
 
     span {
       -webkit-text-fill-color: transparent;
@@ -97,11 +131,26 @@ body {
   }
 
   ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 68px;
     padding: 36px 24px;
     border-radius: 24px;
     background-color: #05062a;
+
+    @include media($lg) {
+      grid-gap: 42px 0;
+      grid-template-columns: 1fr 1fr;
+      padding: 30px 20px;
+    }
+
+    @include media($md) {
+      margin-top: 20px;
+    }
+
+    @include media(658px) {
+      grid-template-columns: 1fr;
+    }
 
     li {
       display: flex;
@@ -111,17 +160,28 @@ body {
 
       + li {
         position: relative;
-        margin-left: 32px;
 
         &::after {
           content: "";
           position: absolute;
-          left: -17px;
+          left: 0;
           top: 50%;
           width: 1px;
           height: 100%;
           background-color: rgba(#fff, 0.5);
           transform: translateY(-50%);
+
+          @include media(658px) {
+            display: none;
+          }
+        }
+
+        &:nth-of-type(3) {
+          &::after {
+            @include media($lg) {
+              display: none;
+            }
+          }
         }
       }
 
@@ -131,10 +191,15 @@ body {
         font-size: 36px;
         line-height: 42px;
         color: #fff;
+
+        @include media($lg) {
+          font-size: 30px;
+        }
       }
 
       p {
         line-height: 120%;
+        text-align: center;
         color: rgba(255, 255, 255, 0.8);
       }
     }
@@ -143,14 +208,33 @@ body {
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include media(676px) {
+      flex-direction: column;
+    }
   }
 
   &__main {
+    margin-right: 20px;
     max-width: 54%;
+
+    @include media($md) {
+      max-width: 70%;
+    }
+
+    @include media(676px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
 
     form {
       display: flex;
       margin-bottom: 48px;
+
+      @include media(676px) {
+        margin-bottom: 24px;
+      }
 
       label {
         position: relative;
@@ -173,6 +257,16 @@ body {
           color: #49546a;
           background-color: #f2faff;
           transition: all 0.3s;
+
+          @include media(676px) {
+            padding: 0 16px;
+            width: 220px;
+          }
+
+          @include media($sm) {
+            padding: 0 10px;
+            width: 160px;
+          }
 
           &:hover {
             background-color: #fff;
@@ -203,14 +297,27 @@ body {
       font-size: 24px;
       line-height: 30px;
       color: #05062a;
+
+      @include media($md) {
+        font-size: 20px;
+      }
     }
   }
 
   &__logos {
     display: flex;
+    flex-wrap: wrap;
 
-    img + img {
-      margin-left: 48px;
+    img {
+      margin-bottom: 24px;
+
+      &:not(:last-child) {
+        margin-right: 48px;
+
+        @include media(676px) {
+          margin-right: 24px;
+        }
+      }
     }
   }
 
@@ -220,8 +327,16 @@ body {
     margin: 0 auto;
     max-width: 100%;
 
+    @include media(676px) {
+      transform: scale(0.8);
+    }
+
     img {
       max-width: 200px;
+
+      @include media($md) {
+        max-width: 140px;
+      }
 
       &:first-of-type {
         z-index: -5;
@@ -239,13 +354,41 @@ body {
   padding: 100px 0 160px;
   overflow: hidden;
 
+  @include media(1300px) {
+    padding: 100px 0 80px;
+  }
+
+  @include media($md) {
+    padding: 64px 0 25px;
+  }
+
   .swiper {
     overflow: visible;
+
+    @include media(821px) {
+      overflow: hidden;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 41%;
   }
 
   .swiper-slide {
     img {
+      width: 100%;
+      max-height: 230px;
       border-radius: 16px;
+      object-fit: cover;
+    }
+
+    h6 {
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 32px;
+      color: #05062a;
     }
   }
 
@@ -255,11 +398,19 @@ body {
     justify-content: space-between;
     margin-bottom: 48px;
 
+    @include media($md) {
+      margin-bottom: 24px;
+    }
+
     h2 {
       font-weight: 600;
       font-size: 48px;
       line-height: 56px;
       color: #05062b;
+
+      @include media($md) {
+        font-size: 36px;
+      }
     }
 
     .btn {
@@ -293,11 +444,28 @@ body {
   position: relative;
   margin-bottom: 173px;
 
+  @include media(1400px) {
+    margin: 0 16px;
+  }
+
+  @include media($lg) {
+    padding-bottom: 100px;
+  }
+
+  @include media($sm) {
+    padding-bottom: 20px;
+  }
+
   .container {
     padding: 60px 48px;
     max-width: 1320px;
     border-radius: 32px;
     background-color: #fff;
+
+    @include media(1400px) {
+      padding: 60px 16px;
+      max-width: 1256px;
+    }
   }
 
   .panel-heading {
@@ -305,48 +473,84 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 56px;
+
+    @include media($lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
   }
 
   .nav-tabs {
     display: flex;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+
+    @include media($lg) {
+      margin-bottom: 32px;
+      overflow-y: hidden;
+    }
 
     li {
+      width: max-content;
+
       a {
+        position: relative;
+        z-index: 4;
         display: flex;
         align-items: center;
         justify-content: center;
         opacity: 0.3;
         padding: 0 24px;
+        width: max-content;
         height: 40px;
-        border: 2px solid;
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
-        border-image-source: linear-gradient(109.89deg, #fff -18%, #fff 93.18%);
-        border-image-slice: 1;
+        border: 0;
         font-weight: 700;
         line-height: 24px;
         color: #05062b;
+        background-color: #fff;
         transition: all 0.3s;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 2px;
+          z-index: -1;
+          background-color: #fff;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: -2;
+          width: 0;
+          background: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+          transition: all 0.3s;
+        }
 
         &:hover {
           opacity: 1;
-          border-image-source: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+
+          &::after {
+            width: 100%;
+          }
         }
       }
+    }
 
-      .panel-link {
-        position: relative;
-        padding: 0 48px 0 24px;
-
-        &::before {
-          content: url("/src/images/panel-link.svg");
-          position: absolute;
-          right: 24px;
-          top: 50%;
-          width: 16px;
-          height: 16px;
-          transform: translateY(-50%);
+    .panel-link {
+      a {
+        img {
+          display: block;
+          margin-left: 8px;
         }
       }
     }
@@ -354,8 +558,61 @@ body {
     .active {
       a {
         opacity: 1;
-        border-image-source: linear-gradient(109.89deg, #4845ba -18%, #1be0ea 93.18%);
+
+        &::after {
+          width: 100%;
+        }
       }
+    }
+  }
+
+  label {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+
+    @include media($lg) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      button {
+        opacity: 1;
+      }
+    }
+
+    button {
+      content: url("/src/images/search.svg");
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      border: none;
+      background-color: transparent;
+      transform: translateY(-50%);
+
+      &::after {
+        content: url("/src/images/search.svg");
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__list {
+    @include media(1050px) {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: scroll;
     }
   }
 
@@ -373,11 +630,28 @@ body {
     justify-content: space-between;
     margin-bottom: 56px;
 
+    @include media($lg) {
+      margin-bottom: 32px;
+    }
+
+    @include media($md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     h2 {
       font-weight: 600;
       font-size: 48px;
       line-height: 56px;
       color: #05062b;
+
+      @include media(871px) {
+        font-size: 36px;
+      }
+
+      @include media($md) {
+        margin-bottom: 16px;
+      }
 
       span {
         -webkit-text-fill-color: transparent;
@@ -419,6 +693,12 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin-bottom: 28px;
     padding: 0 16px 0 30px;
+    width: auto;
+    min-width: 890px;
+
+    @include media($md) {
+      padding: 0 16px;
+    }
 
     li {
       text-align: right;
@@ -441,10 +721,16 @@ body {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 0 16px 0 30px;
+    width: auto;
     height: 74px;
+    min-width: 890px;
     border-radius: 8px;
     transition: all 0.3s;
     cursor: pointer;
+
+    @include media($md) {
+      padding: 0 16px;
+    }
 
     &:hover {
       background-color: #f8fafc;
@@ -579,25 +865,29 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0.3;
-    width: 40px;
+    padding: 0 38px 0 16px;
     height: 40px;
+    min-width: 140px;
+    max-width: 180px;
+    outline: none;
     border: 1px solid #05062b;
     border-radius: 16px;
+    font-weight: 400;
+    font-size: 16.0028px;
+    line-height: 24px;
+    color: #05062b;
     background-color: transparent;
     transition: all 0.3s;
 
-    &::after {
-      content: url("/src/images/search.svg");
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 24px;
-      height: 24px;
-      transform: translate(-50%, -50%);
+    @include media($lg) {
+      width: 100%;
+      max-width: 100%;
     }
 
-    &:hover {
-      border: 1px solid #000;
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
     }
   }
 }
@@ -608,15 +898,28 @@ body {
     align-items: center;
     grid-gap: 0 42px;
     grid-template-columns: 40% 1fr;
+
+    @include media($md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__info {
+    @include media($md) {
+      margin-bottom: 48px;
+    }
+
     h2 {
       margin-bottom: 32px;
       font-weight: 600;
       font-size: 48px;
       line-height: 64px;
       color: #05062b;
+
+      @include media($xl) {
+        margin-bottom: 16px;
+        font-size: 36px;
+      }
 
       span {
         -webkit-text-fill-color: transparent;
@@ -646,10 +949,22 @@ body {
           margin-bottom: 23px;
           width: 60px;
           height: 60px;
+
+          @include media($xl) {
+            margin-bottom: 16px;
+          }
         }
 
         +li {
           margin-left: 74px;
+
+          @include media($xl) {
+            margin-left: 34px;
+          }
+
+          @include media($md) {
+            margin-left: 20px;
+          }
         }
 
         h5 {
@@ -657,6 +972,10 @@ body {
           font-size: 20px;
           line-height: 120%;
           color: #05062a;
+
+          @include media($xl) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -667,6 +986,11 @@ body {
 
     img {
       width: 100%;
+
+      @include media($md) {
+        margin: 0 auto;
+        max-width: 400px;
+      }
     }
   }
 }
@@ -678,11 +1002,28 @@ body {
   color: #fff;
   background-color: #05062a;
 
+  @include media($lg) {
+    padding: 150px 0;
+  }
+
+  @include media($md) {
+    padding: 64px 0;
+  }
+
   .panel-group {
     margin-right: 135px;
     width: 100%;
     max-width: 800px;
     border-bottom: 1px solid rgba(#4f4f4f, 0.24);
+
+    @include media($xl) {
+      margin-right: 50px;
+    }
+
+    @include media($lg) {
+      margin-right: 0;
+      max-width: 100%;
+    }
 
     .panel-body {
       padding-bottom: 24px;
@@ -700,6 +1041,15 @@ body {
       font-size: 32px;
       line-height: 48px;
       color: #fff;
+
+      @include media($xl) {
+        font-size: 24px;
+      }
+
+      @include media($lg) {
+        font-size: 20px;
+        line-height: 150%;
+      }
 
       &::after,
       &::before {
@@ -750,6 +1100,11 @@ body {
     line-height: 64px;
     text-align: center;
 
+    @include media($lg) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+
     span {
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
@@ -760,12 +1115,24 @@ body {
 
   &__wrapper {
     display: flex;
+
+    @include media($lg) {
+      flex-direction: column;
+    }
   }
 
   &__support {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+
+    @include media($lg) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      margin-left: 0;
+    }
 
     li {
       position: relative;
@@ -780,14 +1147,30 @@ body {
 
       + li {
         margin-top: 80px;
+
+        @include media($lg) {
+          margin-top: 0;
+        }
+      }
+
+      &:not(:last-child) {
+        @include media($lg) {
+          margin-right: 24px;
+          margin-bottom: 24px;
+        }
       }
 
       h5 {
         margin-bottom: 8px;
+        width: max-content;
         font-weight: 600;
         font-size: 20px;
         line-height: 32px;
         color: #fff;
+
+        @include media($sm) {
+          width: auto;
+        }
       }
 
       a {
@@ -829,9 +1212,22 @@ body {
   border-radius: 24px;
   background: #fff;
 
+  @include media(1400px) {
+    padding: 60px 0;
+    max-width: 1256px;
+  }
+
+  @include media($md) {
+    margin: 0 auto 40px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include media($md) {
+      flex-direction: column-reverse;
+    }
 
     ul {
       display: grid;
@@ -840,9 +1236,22 @@ body {
       width: 100%;
       max-width: 50%;
 
+      @include media($xl) {
+        grid-gap: 24px;
+      }
+
+      @include media($md) {
+        margin-top: 32px;
+        max-width: 100%;
+      }
+
       li {
         img {
           margin-bottom: 16px;
+
+          @include media($md) {
+            max-width: 80px;
+          }
         }
 
         h4 {
@@ -850,6 +1259,11 @@ body {
           font-size: 24px;
           line-height: 32px;
           color: #05062a;
+
+          @include media($xl) {
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
       }
     }
@@ -858,6 +1272,10 @@ body {
   &__text {
     width: 100%;
     max-width: 40%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
 
     h3 {
       font-weight: 600;
@@ -881,6 +1299,10 @@ body {
   padding: 170px 0 250px;
   color: #fff;
   background: linear-gradient(94.08deg, #1be0ea -39.61%, #4845ba 133.36%), #05062a;
+
+  @include media($lg) {
+    padding: 120px 0 190px;
+  }
 
   &::before {
     content: url("/src/images/decor-journey.svg");
@@ -912,12 +1334,20 @@ body {
     font-weight: 600;
     font-size: 56px;
     line-height: 64px;
+
+    @include media($lg) {
+      font-size: 48px;
+    }
   }
 
   p {
     margin-bottom: 32px;
     max-width: 70%;
     line-height: 32px;
+
+    @include media($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   .btn {
@@ -961,6 +1391,10 @@ body {
   &__main {
     width: 100%;
     max-width: 50%;
+
+    @include media($md) {
+      max-width: 80%;
+    }
   }
 
   &__img {
@@ -971,12 +1405,33 @@ body {
     width: 100%;
     max-width: 50%;
 
+    @include media($md) {
+      right: -10%;
+      top: 40%;
+      z-index: -1;
+      max-width: 250px;
+    }
+
+    @include media($sm) {
+      max-width: 200px;
+    }
+
     &::after {
-      content: url("/src/images/rocket.png?as=webp");
+      content: "";
       position: absolute;
       right: 0;
       top: 50%;
+      width: 100%;
+      height: 700px;
+      background-image: url("/src/images/rocket.png?as=webp");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       transform: translateY(-50%);
+
+      @include media($lg) {
+        background-position: center bottom;
+      }
     }
   }
 
@@ -989,9 +1444,13 @@ body {
 
 .media {
   position: relative;
-  padding: 120px;
+  padding: 120px 0;
   color: #fff;
   background-color: #05062a;
+
+  @include media($md) {
+    padding: 64px 0;
+  }
 
   h2 {
     margin-bottom: 14px;
@@ -1017,6 +1476,10 @@ body {
     border-radius: 16px;
     line-height: 160%;
     text-align: center;
+
+    @include media($lg) {
+      max-width: 80%;
+    }
 
     &::after {
       content: url("/src/images/triangle.svg");
@@ -1065,8 +1528,9 @@ body {
   &__back {
     position: absolute;
     left: 0;
-    top: -37%;
-    z-index: -5;
+    top: -45%;
+    z-index: -1;
+    width: 100%;
   }
 }
 
