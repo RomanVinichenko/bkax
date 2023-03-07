@@ -1,6 +1,10 @@
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 body {
   position: relative;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   overflow-y: scroll;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
