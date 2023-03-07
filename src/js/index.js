@@ -26,8 +26,8 @@ const swiperNews = new Swiper('.news__swiper', {
   }
 });
 const swiperMedia = new Swiper('.media__swiper', {
-  slidesPerView: 1,
-  spaceBetween: 12,
+  slidesPerView: 2,
+  spaceBetween: 8,
   loop: true,
   centeredSlides: true,
   navigation: {

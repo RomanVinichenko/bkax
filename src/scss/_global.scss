@@ -520,11 +520,12 @@ body {
     max-width: 100%;
 
     @include media($lg) {
-      margin-bottom: 32px;
-      overflow-y: hidden;
+      margin-bottom: 22px;
+      overflow: auto;
     }
 
     li {
+      padding-bottom: 12px;
       width: max-content;
 
       a {
@@ -1057,9 +1058,23 @@ body {
       width: 100%;
 
       @include media($md) {
+        display: none;
         margin: 0 auto;
         max-width: 400px;
       }
+    }
+  }
+
+  &__img--mobile {
+    display: none;
+    margin: 48px auto;
+
+    @include media($md) {
+      display: block;
+    }
+
+    img {
+      margin: 0 auto;
     }
   }
 }
@@ -1291,11 +1306,16 @@ body {
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
 
     @include media($md) {
       flex-direction: column-reverse;
+    }
+
+    @include media($md) {
+      padding-bottom: 120px;
     }
 
     ul {
@@ -1351,12 +1371,29 @@ body {
       font-size: 32px;
       line-height: 64px;
       color: #05062a;
+
+      @include media($lg) {
+        line-height: 44px;
+      }
     }
 
     p {
       margin-bottom: 48px;
       line-height: 160%;
       color: #05062a;
+
+      @include media($md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn {
+      @include media($md) {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -1648,11 +1685,10 @@ body {
 
 .top-mobile {
   position: absolute;
-  right: 0;
+  right: -8%;
   top: 2%;
   z-index: -1;
   display: none;
-  width: 150%;
   transform: scale(1.5);
 
   @include media($md) {
